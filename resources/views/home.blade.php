@@ -4,7 +4,7 @@
 
     @extends('header')
 
-    @if(Auth::user()->id === 2)
+    @if(Auth::user()->role_id === 2)
     <section id="features" class="services-area pt-120">
         <div class="container">
             <div class="row justify-content-center">
@@ -35,7 +35,7 @@
                             <i class="lni-cog"></i>
                         </div>
                         <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Kirim laporan</a></h4>
+                            <h4 class="services-title"><a href="upload">Kirim laporan</a></h4>
                         </div>
                     </div> <!-- single services -->
                 </div>
@@ -46,8 +46,8 @@
                             <img class="shape-1" src="assets/images/services-shape-1.svg" alt="shape">
                             <i class="lni-baloon"></i>
                         </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="/ajukan">Info Prakerin</a></h4>
+                        <div class="services-content mt-30"></div>
+                            <h4 class="services-title"><a href="/info">Info Prakerin</a></h4>
                         </div>
                     </div> <!-- single services -->
                 </div>
@@ -110,6 +110,18 @@
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="/siswa">akun siswa</a></h4>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="services-icon">
+                            <img class="shape" src="assets/images/services-shape.svg" alt="shape">
+                            <img class="shape-1" src="assets/images/services-shape-2.svg" alt="shape">
+                            <i class="lni-cog"></i>
+                        </div>
+                        <div class="services-content mt-30">
+                            <h4 class="services-title"><a href="/laporan">Laporan siswa</a></h4>
                         </div>
                     </div> <!-- single services -->
                 </div>
