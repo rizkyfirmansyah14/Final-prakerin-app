@@ -50,7 +50,7 @@ class SiswaController extends Controller
         $siswas->jurusan_id = $request->jurusan_id;
         $siswas->save();
 
-        return redirect()->back();
+        return redirect('/siswa')->with('status','Siswa berhasil di tambah');
     }
 
     /**

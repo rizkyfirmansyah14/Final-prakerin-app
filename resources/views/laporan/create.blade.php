@@ -95,22 +95,10 @@
         <form action="/upload/proses" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label for="nama">Masukan Nama</label>
-                <input type="text" class="form-control" name="nama">
-                </div>
-            <div class="form-group">
                     <label for="jurusan">Jurusan</label>
                     <select name="jurusan" id="jurusan" class="form-control">
                     @foreach($jurusans as $jurusan)
-                        <option value="{{$jurusan->nama}}">{{$jurusan->nama}}</option>
-                    @endforeach
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="jurusan">kelas</label>
-                    <select name="kelas" id="jurusan" class="form-control">
-                    @foreach($kelases as $kelas)
-                        <option value="{{$kelas->kelas}}">{{$kelas->kelas}}</option>
+                        <option value="{{$jurusan->id}}">{{$jurusan->nama}}</option>
                     @endforeach
                     </select>
                 </div>
@@ -118,8 +106,6 @@
                 <label for="nama">Masukan file Laporan</label>
                 <input type="file" class="form-control" name="file">
             </div>
-            <div class="form-group">
-
                 <button class="main-btn">kirim Laporan</button>
         </form>
     </div>

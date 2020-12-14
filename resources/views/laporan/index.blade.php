@@ -16,7 +16,6 @@
                     <tr>
                     <th scope="col">NO</th>
                     <th scope="col">Nama</th>
-                    <th scope="col">Kelas</th>
                     <th scope="col">Jurusan</th>
                     <th scope="col">Laporan</th>
                     <th scope="col">Action</th>
@@ -27,9 +26,16 @@
                     @foreach($lapor as $l)
                         <tr>
                             <th scope="row">{{$i++}}</th>
-                            <td>{{$l->nama}}</td>
-                            <td>{{$l->kelas}}</td>
-                            <td>{{$l->jurusan}}</td>
+                            <td>
+                            @foreach($l->User as $item)
+{{$item->name}}
+                            @endforeach
+                            </td>
+                            <td>
+                            @foreach($l->Jurusan as $item)
+{{$item->nama}}
+                            @endforeach
+                            </td>
                            <td><a href='/uploads/{{$l->file}}'>{{$l->file}}</a></td>
                            <td><a href="" class="main-btn">Setujui</a></td>
                         </tr>

@@ -65,8 +65,8 @@
         <div class="container">
             <div class="header my-4 d-flex justify-content-between">
                 <div class="title">
-                    <h4>Daftar Perusahaan</h4>
-                    <p>yang akan di ajukan untuk prakerin</p>
+                    <h4>Daftar Pembimbing</h4>
+                    <p>Daftar pembimbing setiap jurusan</p>
                 </div>
                 <!-- <a href="/admin/jurusans" class="main-btn">management jurusan</a> -->
             </div>

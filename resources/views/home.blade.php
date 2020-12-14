@@ -43,7 +43,7 @@
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="services-icon">
                             <img class="shape" src="assets/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="assets/images/services-shape-1.svg" alt="shape">
+                            <img class="shape-1" src="assets/images/services-shape-3.svg" alt="shape">
                             <i class="lni-baloon"></i>
                         </div>
                         <div class="services-content mt-30"></div>

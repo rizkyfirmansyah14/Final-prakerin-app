@@ -8,9 +8,18 @@
         <div class="container">
             <div class="header my-4 d-flex justify-content-between">
                 <div class="title">
+                    <a href="{{ url('siswa/create')}}">Tambah Siswa</a>
                     <h4>Daftar Siswa</h4>
                     <p>yang akan di ajukan untuk prakerin</p>
                 </div>
+
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
+
+                
                 <a href="/admin/perusahaans" class="main-btn">management siswa</a>
             </div>
             <table class="table table-striped table-borderless">

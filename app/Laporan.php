@@ -6,18 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Laporan extends Model
 {
+    public function User()
+    {
+        return $this->hasMany('App\User', 'id', 'user_id');
+    }
+
     public function jurusan()
     {
-        return $this->belongsTo('App\Jurusan');
+        return $this->hasMany('App\Jurusan', 'id', 'jurusan_id');
     }
-
-     public function user()
-    {
-        return $this->belongsTo('App\Siswa');
-    }
-
-    protected $table = "laporans";
- 
-    protected $fillable = ['nama','kelas','jurusan','file'];
-
 }

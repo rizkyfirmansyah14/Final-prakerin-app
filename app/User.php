@@ -41,4 +41,9 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasOne('App\Kelas', 'id', 'kelas_id');
     }
+
+    public function Laporan()
+    {
+        return $this->belongsTo('App\Laporan');
+    }
 }

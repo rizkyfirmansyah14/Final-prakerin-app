@@ -16,15 +16,14 @@ class UploadController extends Controller
 	}
 
 	public function laporan(){
-		$lapor = DB::table('laporans')->get();
+		$lapor = \App\laporan::all();
 		return view('laporan/index', compact('lapor'));
 	}
 
 	public function proses_upload(Request $request){
+		$pengajuans = new \App\Laporan;
+		
 		$this->validate($request, [
-			'nama' 	  => 'required',
-			'jurusan' => 'required',
-			'kelas'   => 'required',
 			'file'    => 'required',
 		]);
  
@@ -33,19 +32,17 @@ class UploadController extends Controller
 
 		$nama_file = time()."_".$file->getClientOriginalName();
 
-      	        // isi dengan nama folder tempat kemana file diupload
+      	 // isi dengan nama folder tempat kemana file diupload
 		$tujuan_upload = 'uploads';
  
-                // upload file
+        // upload file
 		$file->move($tujuan_upload,$nama_file);
 
-		Laporan::create([
-			'file' => $nama_file,
-			'nama' => $request->nama,
-			'kelas' => $request->kelas,
-			'jurusan' => $request->jurusan,
-			
-		]);
+		$pengajuans->user_id = \Auth::user()->id;
+		$pengajuans->jurusan_id = $request->jurusan;
+		$pengajuans->file = $nama_file;
+		
+		$pengajuans->save();
 
 		return redirect('/upload')->with(['success' => 'Laporan berhasil di kirim']);
 	}
